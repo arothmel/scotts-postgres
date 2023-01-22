@@ -6,11 +6,11 @@ Directed at an experienced database professional now using docker for the first 
 
 ### Requirements
 
-Have docker installed.
+- Have docker installed.
 
-Have a user to run the docker commands (other than root)
+- Have a user to run the docker commands (other than root)
 
-Have db client such as psql installed on local machine (For windows users DBeaver will probably work. I haven't tested yet. )
+- Have db client such as psql installed on local machine (For windows users DBeaver will probably work. I haven't tested yet. )
 
 ### Step One
 Create a folder on your local machine. Call it postgres or scotts-postgress for example. The folder name represents the project name. 
