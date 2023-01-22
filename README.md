@@ -1,4 +1,4 @@
-# Basic "How to" that includes all of the steps needed to create the employess table in your Docker container using PostgreSQL
+Basic "How to" that includes all of the steps needed to create the employess table in your Docker container using PostgreSQL
 
 # scotts-postgres
 
