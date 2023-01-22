@@ -3,7 +3,6 @@
 ## Basic "How to" that includes all of the steps needed to create the employess table in your Docker container using PostgreSQL
 
 ### Overview
-=========
 
 To build the image and run the container use the following commands:
 
@@ -24,6 +23,75 @@ Connect to client on local machine. For linux users psql is fine.
 $ psql -h localhost -U scott -d mydatabase
 ```
 
-
 You'll be prompted for the password, which is tiger in this example.
+
+## PostgreSQL 101
+### In fact Scott, it's much like the Oracle that you are so familar with :)
+
+```
+$ psql -h localhost -U scott -d mydatabase
+Password for user scott:
+psql (13.4, server 15.1 (Debian 15.1-1.pgdg110+1))
+WARNING: psql major version 13, server major version 15.
+         Some psql features might not work.
+Type "help" for help.
+
+mydatabase=# CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INTEGER NOT NULL,
+    address VARCHAR(255) NOT NULL
+);
+CREATE TABLE
+mydatabase=# \dt
+         List of relations
+ Schema |   Name    | Type  | Owner
+--------+-----------+-------+-------
+ public | employees | table | scott
+(1 row)
+
+mydatabase=# INSERT INTO employees (name, age, address) VALUES ('John Doe', 25, '123 Main St');
+INSERT 0 1
+mydatabase=# \dt
+         List of relations
+ Schema |   Name    | Type  | Owner
+--------+-----------+-------+-------
+ public | employees | table | scott
+(1 row)
+
+mydatabase=# SELECT * FROM employees;
+ id |   name   | age |   address
+----+----------+-----+-------------
+  1 | John Doe |  25 | 123 Main St
+(1 row)
+
+```
+
+
+## Tips 
+
+You can check if your container is running by using the docker ps command. This command will list all the running containers and you should see the my-postgres-container in the list.
+
+```
+docker ps
+```
+
+You can also stop or restart the container by using docker stop my-postgres-container and docker start my-postgres-container command respectively.
+
+```
+$ docker stop my-postgres-container
+$ docker start my-postgres-container
+```
+
+You can also use docker logs to check the container logs.
+
+```
+docker logs my-postgres-container
+```
+
+Use docker exec -it my-postgres-container bash to open an interactive shell session inside the container
+
+```
+docker exec -it my-postgres-container bash
+```
 
