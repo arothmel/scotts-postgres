@@ -1,6 +1,6 @@
 # scotts-postgres
 
-## Basic "How to" that includes all of the steps needed to create the employess table in your Docker container using PostgreSQL
+## Basic "How to" that includes all of the steps needed to create the employees table in your Docker container using PostgreSQL
 Directed at an experienced database professional now using docker for the first time.
 
 
