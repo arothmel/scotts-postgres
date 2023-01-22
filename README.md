@@ -34,7 +34,7 @@ To build the image and run the container use the following commands:
 
 ```
 $ docker build -t scotts-postgres .
-$ docker run -d -p 5432:5432 --name my-postgres-container scotts-postgres
+$ docker run -d -p 5432:5432 --name scotts-postgres-container scotts-postgres
 ```
 
 
