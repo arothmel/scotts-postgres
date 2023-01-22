@@ -1,0 +1,8 @@
+FROM postgres:latest
+
+ENV POSTGRES_USER scott
+ENV POSTGRES_PASSWORD tiger
+ENV POSTGRES_DB mydatabase
+
+EXPOSE 5432
+
