@@ -7,7 +7,7 @@
 
 To build the image and run the container use the following commands:
 
-'''
+'''bash
 $ docker build -t my-postgres .
 $ docker run -d -p 5432:5432 --name my-postgres-container my-postgres
 '''
