@@ -74,23 +74,12 @@ mydatabase=# CREATE TABLE employees (
     age INTEGER NOT NULL,
     address VARCHAR(255) NOT NULL
 );
-CREATE TABLE
-```
-Using \dt 
-```
 
-mydatabase=# \dt
-         List of relations
- Schema |   Name    | Type  | Owner
---------+-----------+-------+-------
- public | employees | table | scott
-(1 row)
 ```
 ### Using SQL Insert
 ```
 mydatabase=# INSERT INTO employees (name, age, address) VALUES ('John Doe', 25, '123 Main St');
-INSERT 0 1
-mydatabase=# \dt
+
          List of relations
  Schema |   Name    | Type  | Owner
 --------+-----------+-------+-------
