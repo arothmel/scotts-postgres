@@ -86,7 +86,7 @@ mydatabase=# \dt
  public | employees | table | scott
 (1 row)
 ```
-### Using SQL
+### Using SQL Insert
 ```
 mydatabase=# INSERT INTO employees (name, age, address) VALUES ('John Doe', 25, '123 Main St');
 INSERT 0 1
@@ -96,6 +96,10 @@ mydatabase=# \dt
 --------+-----------+-------+-------
  public | employees | table | scott
 (1 row)
+```
+### Using SQL Select
+
+```
 
 mydatabase=# SELECT * FROM employees;
  id |   name   | age |   address
