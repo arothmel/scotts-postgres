@@ -7,14 +7,14 @@
 To build the image and run the container use the following commands:
 
 ```
-$ docker build -t my-postgres .
-$ docker run -d -p 5432:5432 --name my-postgres-container my-postgres
+$ docker build -t scotts-postgres .
+$ docker run -d -p 5432:5432 --name my-postgres-container scotts-postgres
 ```
 
 
-The first command builds the image and tags it as my-postgres.
+The first command builds the image and tags it as scotts-postgres.
 
-The second command runs the container and maps port 5432 on the host to port 5432 in the container. The container will be named my-postgres-container. The -d flag stands for "detached" mode and it runs the container in the background. This allows you to run other commands in the same shell while the container is still running. It's up to you.
+The second command runs the container and maps port 5432 on the host to port 5432 in the container. The container will be named scotts-postgres-container. The -d flag stands for "detached" mode and it runs the container in the background. This allows you to run other commands in the same shell while the container is still running. It's up to you.
 
 Connect to client on local machine. For linux users psql is fine.
 
@@ -70,28 +70,28 @@ mydatabase=# SELECT * FROM employees;
 
 ## Tips 
 
-You can check if your container is running by using the docker ps command. This command will list all the running containers and you should see the my-postgres-container in the list.
+You can check if your container is running by using the docker ps command. This command will list all the running containers and you should see the scotts-postgres-container in the list.
 
 ```
 docker ps
 ```
 
-You can also stop or restart the container by using docker stop my-postgres-container and docker start my-postgres-container command respectively.
+You can also stop or restart the container by using docker stop scotts-postgres-container and docker start scotts-postgres-container command respectively.
 
 ```
-$ docker stop my-postgres-container
-$ docker start my-postgres-container
+$ docker stop scotts-postgres-container
+$ docker start scotts-postgres-container
 ```
 
 You can also use docker logs to check the container logs.
 
 ```
-docker logs my-postgres-container
+docker logs scotts-postgres-container
 ```
 
-Use docker exec -it my-postgres-container bash to open an interactive shell session inside the container
+Use docker exec -it scotts-postgres-container bash to open an interactive shell session inside the container
 
 ```
-docker exec -it my-postgres-container bash
+docker exec -it scotts-postgres-container bash
 ```
 
