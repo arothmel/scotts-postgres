@@ -12,7 +12,7 @@ Have a user to run the docker commands (other than root)
 Have db client such as psql installed on local machine (For windows users. DBeaver will probably work. I haven't tested yet. )
 
 ### Step One
-Create a folder on your local machine. Call it postgres or scots-postgress for example. 
+Create a folder on your local machine. Call it postgres or scots-postgress for example. The folder name represents the project name. 
 Inside that folder create a file and call it Dockerfile. Next copy this text into the newly created Dockerfile.
 
 ```
