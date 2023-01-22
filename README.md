@@ -64,7 +64,9 @@ psql (13.4, server 15.1 (Debian 15.1-1.pgdg110+1))
 WARNING: psql major version 13, server major version 15.
          Some psql features might not work.
 Type "help" for help.
-
+```
+From inside psql create a table using SQL.
+```
 mydatabase=# CREATE TABLE employees (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -72,13 +74,19 @@ mydatabase=# CREATE TABLE employees (
     address VARCHAR(255) NOT NULL
 );
 CREATE TABLE
+```
+Using \dt 
+```
+
 mydatabase=# \dt
          List of relations
  Schema |   Name    | Type  | Owner
 --------+-----------+-------+-------
  public | employees | table | scott
 (1 row)
-
+```
+### Using SQL
+```
 mydatabase=# INSERT INTO employees (name, age, address) VALUES ('John Doe', 25, '123 Main St');
 INSERT 0 1
 mydatabase=# \dt
