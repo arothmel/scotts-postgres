@@ -2,7 +2,31 @@
 
 ## Basic "How to" that includes all of the steps needed to create the employess table in your Docker container using PostgreSQL
 
-### Overview
+
+### Requirements
+
+Have docker installed.
+
+Have a user to run the docker commands (other than root)
+
+Have db client such as psql installed on local machine (For windows users. DBeaver will probably work. I haven't tested yet. )
+
+### Step One
+Create a folder on your local machine and copy the Dockerfile into the directory.
+```
+FROM postgres:latest
+
+ENV POSTGRES_USER scott
+ENV POSTGRES_PASSWORD tiger
+ENV POSTGRES_DB mydatabase
+
+EXPOSE 5432
+
+
+```
+Stay in the same directory to run the following two commands using the command line. 
+
+### Step two
 
 To build the image and run the container use the following commands:
 
@@ -16,6 +40,7 @@ The first command builds the image and tags it as scotts-postgres.
 
 The second command runs the container and maps port 5432 on the host to port 5432 in the container. The container will be named scotts-postgres-container. The -d flag stands for "detached" mode and it runs the container in the background. This allows you to run other commands in the same shell while the container is still running. It's up to you.
 
+### Step three
 Connect to client on local machine. For linux users psql is fine.
 
 
@@ -26,7 +51,9 @@ $ psql -h localhost -U scott -d mydatabase
 You'll be prompted for the password, which is tiger in this example.
 
 ## PostgreSQL 101
-### In fact Scott, it's much like the Oracle that you are so familar with :)
+
+### Step four
+In fact Scott, it's much like the Oracle that you are so familar with :)
 
 ```
 $ psql -h localhost -U scott -d mydatabase
